@@ -7,36 +7,66 @@
     <meta name="description" content="Currículum Vitae de Daniel Julian Vilema Lazo, incluyendo experiencia, habilidades, educación y proyectos.">
     <meta name="author" content="Daniel Julian Vilema Lazo">
     <title>Currículum Vitae - Daniel Julian Vilema Lazo</title>
+    <link rel="stylesheet" href="./stylesheets/style.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            margin: 20px;
+            margin: 0;
             padding: 0;
+            background: #fafbfc;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto 0 auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+            padding: 32px 28px 28px 28px;
         }
         h1, h2 {
             color: #333;
+            text-align: center;
         }
         nav ul {
-            
+            display: flex;
+            justify-content: center;
+            list-style: none;
             padding: 0;
+            margin-bottom: 30px;
+            gap: 15px;
         }
         nav ul li {
-          
-            margin-right: 15px;
+            margin: 0;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #2c3e50;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        nav ul li a:hover {
+            color: #0074d9;
         }
         .section {
-            margin-bottom: 20px;
+            margin-bottom: 32px;
         }
         .section h2 {
             border-bottom: 2px solid #ddd;
             padding-bottom: 5px;
+            margin-bottom: 18px;
         }
-        footer {
-            margin-top: 20px;
+        .perfil-img {
+            border-radius: 50%;
+            border: 2px solid #333;
+            display: block;
+            margin: 0 auto 15px auto;
+            width: 200px;
+            height: 200px;
+        }
+        .perfil-contacto {
             text-align: center;
-            font-size: 0.9em;
-            color: #666;
+            margin-bottom: 0;
         }
         table {
             border-collapse: collapse;
@@ -52,222 +82,255 @@
             background-color: #f2f2f2;
             font-weight: bold;
         }
+        .referencias-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: center;
+        }
+        .referencia-card {
+            flex: 1 1 250px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            min-width: 250px;
+            max-width: 320px;
+        }
+        .referencia-card span {
+            font-style: italic;
+            color: #2c3e50;
+        }
+        .referencia-card p {
+            margin: 10px 0 0 0;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (max-width: 700px) {
+            .container {
+                padding: 10px 2vw;
+            }
+            .referencias-flex {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
     </style>
 </head>
 <body>
-    <section id="perfil" class="section">
-        <h2>Perfil</h2>
-        <img src="https://placehold.co/200x200?text=Foto+Perfil" alt="Foto de perfil" style="border-radius: 50%; border: 2px solid #333; display: block; margin: 0 auto 15px auto; width: 200px; height: 200px;">
-        <h1 style="text-align:center; margin-bottom: 10px;">Daniel Julian Vilema Lazo</h1>
-        <p style="text-align:center;">
-            Estudiante de Ingeniería en Computación con experiencia en el desarrollo de Software, atención al cliente e interpretación bilingüe.<br>
-            Buscando una oportunidad para aplicar mis habilidades técnicas y de comunicación en un entorno profesional.
-        </p>
-        <p>
-            Puedes conocer más sobre mi perfil profesional visitando mi 
-            <a href="https://www.linkedin.com/in/danielvilema" target="_blank">LinkedIn</a>.
-        </p>
-    </section>
-    <header>
-        <p>Contacto: djvilema@espol.edu.ec | 
-            <a href="https://www.linkedin.com/in/danielvilema" target="_blank">www.linkedin.com/in/danielvilema</a>
-        </p>
-        <nav>
-            <ul>
-                <li><a href="#perfil">Perfil</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#experiencia">Experiencia</a></li>
-                <li><a href="#educacion">Educación</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#referencias">Referencias</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-
-        <section id="habilidades" class="section">
-            <h2>Habilidades</h2>
-            <ul>
-                <li>Bases de datos: SQL, MySQL</li>
-                <li>Lenguajes de programación: Python, Java, C, Html.</li>
-                <li>Nivel de inglés: Avanzado C2.</li>
-                <li>Atención al cliente y soporte técnico.</li>
-            </ul>
-        </section>
-
-        <section id="experiencia" class="section">
-            <h2>Experiencia</h2>
-            <ol>
-                <li>
-                    <strong>Nombre de la Empresa</strong> - Título del Puesto (Fechas)
-                    <p>Descripción de tus logros y responsabilidades en este rol.</p>
-                </li>
-                <li>
-                    <strong>Nombre de la Empresa</strong> - Título del Puesto (Fechas)
-                    <p>Descripción de tus logros y responsabilidades en este rol.</p>
-                </li>
-            </ol>
-        </section>
-
-        <section id="educacion" class="section">
-            <h2>Educación</h2>
-            <ul>
-                <li>
-                    <strong>Universidad: Escuela Superior Politécnica del Litoral (Ingeniería en Computación).</strong> - Título Obtenido (Fechas)
-                </li>
-                <li>
-                    <strong>Colegio: Academia Naval Almirante Illingworth (Bachiller en Ciencias).</strong> - Título Obtenido (Fechas)
-                </li>
-            </ul>
-        </section>
-
-        <section id="proyectos" class="section">
-            <h2>Proyectos</h2>
-            <table style="width:100%; border-collapse:collapse; border:none; margin-bottom: 20px;">
-  <thead>
-    <tr>
-      <th style="border:none;">Proyecto</th>
-      <th style="border:none;">Descripción</th>
-      <th style="border:none;">Tecnologías</th>
-      <th style="border:none;">Estado</th>
-      <th style="border:none;">Enlace</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="border:none;"><code>Heladería Virtual</code></td>
-      <td style="border:none;">Aplicación desarrollada en Java que simula una tienda de helados. Permite a los usuarios navegar por un menú con distintos sabores, realizar pedidos, gestionar entregas y efectuar pagos a través de una interfaz sencilla. El sistema incluye confirmación de pedidos, organización del proceso de compra y una experiencia completa similar a la de una tienda en línea.</td>
-      <td style="border:none;">Java, CSS</td>
-      <td style="border:none;">✅ Completado</td>
-      <td style="border:none;"><a href="https://github.com/cimontesm/POO4_PROY2P_Montes_Reyes_Vilema">Ver proyecto</a></td>
-    </tr>
-    <tr>
-      <td style="border:none;"><code>2ESTRAYA</code></td>
-      <td style="border:none;">Juego de Tres en Raya implementado en Java que utiliza árboles de decisión para determinar las mejores jugadas posibles. Cuenta con tres modos: jugador vs jugador, jugador vs computadora y computadora vs computadora. La inteligencia artificial está diseñada para no perder nunca, tomando siempre la mejor decisión en cada turno.</td>
-      <td style="border:none;">Java</td>
-      <td style="border:none;">✅ Completado</td>
-      <td style="border:none;"><a href="https://github.com/Dalay20/2ESTRAYA">Ver proyecto</a></td>
-    </tr>
-    <tr>
-      <td style="border:none;"><code>Sistema de Gestión de Multas</code></td>
-      <td style="border:none;">Aplicación desarrollada en Java para la gestión de multas vehiculares. Permite consultar, pagar multas y agendar citas para trámites relacionados. El sistema valida que no se puedan agendar citas hasta que todas las multas estén pagadas. Funciona mediante un menú de opciones interactivo.</td>
-      <td style="border:none;">Java</td>
-      <td style="border:none;">✅ Completado</td>
-      <td style="border:none;"><a href="https://github.com/cimontesm/POO4_1P_G10_MontesReyesVilema">Ver proyecto</a></td>
-    </tr>
-  </tbody>
-</table>
-        </section>
-
-        <section id="contacto" class="section" style="max-width: 700px; margin-left: 0; margin-right: 0;">
-            <h2 style="color:#2c3e50; text-align:left;">Contacto</h2>
-            <p style="text-align:left; margin-bottom: 25px;">
-                Déjame tus datos y comentarios para poder comunicarme contigo o proponerme algún proyecto.
+    <div class="container">
+        <section id="perfil" class="section">
+            <h2 class="subtitle">Perfil</h2>
+            <img id="photo" src="https://placehold.co/200x200?text=Foto+Perfil" alt="Foto de perfil" class="perfil-img">
+            <h1 style="margin-bottom: 10px;">Daniel Julian Vilema Lazo</h1>
+            <p style="text-align:center;">
+                Estudiante de Ingeniería en Computación con experiencia en el desarrollo de Software, atención al cliente e interpretación bilingüe.<br>
+                Buscando una oportunidad para aplicar mis habilidades técnicas y de comunicación en un entorno profesional.
             </p>
+            <p class="perfil-contacto">
+                djvilema@espol.edu.ec | 
+                <a href="https://www.linkedin.com/in/danielvilema" target="_blank">www.linkedin.com/in/danielvilema</a>
+            </p>
+        </section>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#perfil">Perfil</a></li>
+                    <li><a href="#habilidades">Habilidades</a></li>
+                    <li><a href="#experiencia">Experiencia</a></li>
+                    <li><a href="#educacion">Educación</a></li>
+                    <li><a href="#proyectos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#referencias">Referencias</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section id="habilidades" class="section">
+                <h2 class="subtitle">Habilidades</h2>
+                <ul>
+                    <li>Bases de datos: SQL, MySQL</li>
+                    <li>Lenguajes de programación: Python, Java, C, Html.</li>
+                    <li>Nivel de inglés: Avanzado C2.</li>
+                    <li>Atención al cliente y soporte técnico.</li>
+                </ul>
+            </section>
 
-            <form action="#" method="post" style="background: #f9f9f9; padding: 25px 30px 20px 30px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07);">
-                <fieldset style="border:none; padding:0; margin:0;">
-                    <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-                        <div style="flex: 1 1 250px; min-width: 220px;">
-                            <label for="nombre" style="font-weight:bold;">Nombre:</label>
-                            <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre" style="width:100%; padding:8px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc;">
+            <section id="experiencia" class="section">
+                <h2 class="subtitle">Experiencia</h2>
+                <ol>
+                    <li>
+                        <strong>Nombre de la Empresa</strong> - Título del Puesto (Fechas)
+                        <p>Descripción de tus logros y responsabilidades en este rol.</p>
+                    </li>
+                    <li>
+                        <strong>Nombre de la Empresa</strong> - Título del Puesto (Fechas)
+                        <p>Descripción de tus logros y responsabilidades en este rol.</p>
+                    </li>
+                </ol>
+            </section>
+
+            <section id="educacion" class="section">
+                <h2 class="subtitle">Educación</h2>
+                <ul>
+                    <li>
+                        <strong>Universidad: Escuela Superior Politécnica del Litoral (Ingeniería en Computación).</strong> - Título Obtenido (Fechas)
+                    </li>
+                    <li>
+                        <strong>Colegio: Academia Naval Almirante Illingworth (Bachiller en Ciencias).</strong> - Título Obtenido (Fechas)
+                    </li>
+                </ul>
+            </section>
+
+            <section id="proyectos" class="section">
+                <h2 class="subtitle">Proyectos</h2>
+                <table style="width:100%; border-collapse:collapse; border:none; margin-bottom: 20px;">
+                    <thead>
+                        <tr>
+                            <th style="border:none;">Proyecto</th>
+                            <th style="border:none;">Descripción</th>
+                            <th style="border:none;">Tecnologías</th>
+                            <th style="border:none;">Estado</th>
+                            <th style="border:none;">Enlace</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="border:none;"><code>Heladería Virtual</code></td>
+                            <td style="border:none;">Aplicación desarrollada en Java que simula una tienda de helados. Permite a los usuarios navegar por un menú con distintos sabores, realizar pedidos, gestionar entregas y efectuar pagos a través de una interfaz sencilla. El sistema incluye confirmación de pedidos, organización del proceso de compra y una experiencia completa similar a la de una tienda en línea.</td>
+                            <td style="border:none;">Java, CSS</td>
+                            <td style="border:none;">✅ Completado</td>
+                            <td style="border:none;"><a href="https://github.com/cimontesm/POO4_PROY2P_Montes_Reyes_Vilema">Ver proyecto</a></td>
+                        </tr>
+                        <tr>
+                            <td style="border:none;"><code>2ESTRAYA</code></td>
+                            <td style="border:none;">Juego de Tres en Raya implementado en Java que utiliza árboles de decisión para determinar las mejores jugadas posibles. Cuenta con tres modos: jugador vs jugador, jugador vs computadora y computadora vs computadora. La inteligencia artificial está diseñada para no perder nunca, tomando siempre la mejor decisión en cada turno.</td>
+                            <td style="border:none;">Java</td>
+                            <td style="border:none;">✅ Completado</td>
+                            <td style="border:none;"><a href="https://github.com/Dalay20/2ESTRAYA">Ver proyecto</a></td>
+                        </tr>
+                        <tr>
+                            <td style="border:none;"><code>Sistema de Gestión de Multas</code></td>
+                            <td style="border:none;">Aplicación desarrollada en Java para la gestión de multas vehiculares. Permite consultar, pagar multas y agendar citas para trámites relacionados. El sistema valida que no se puedan agendar citas hasta que todas las multas estén pagadas. Funciona mediante un menú de opciones interactivo.</td>
+                            <td style="border:none;">Java</td>
+                            <td style="border:none;">✅ Completado</td>
+                            <td style="border:none;"><a href="https://github.com/cimontesm/POO4_1P_G10_MontesReyesVilema">Ver proyecto</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="contacto" class="section">
+                <h2 class="subtitle">Contacto</h2>
+                <p style="text-align:center; margin-bottom: 25px;">
+                    Déjame tus datos y comentarios para poder comunicarme contigo o proponerme algún proyecto.
+                </p>
+                <form action="#" method="post" style="background: #f9f9f9; padding: 25px 30px 20px 30px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); max-width: 600px; margin: 0 auto;">
+                    <fieldset style="border:none; padding:0; margin:0;">
+                        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                            <div style="flex: 1 1 250px; min-width: 220px;">
+                                <label for="nombre" style="font-weight:bold;">Nombre:</label>
+                                <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre" style="width:100%; padding:8px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc;">
+                            </div>
+                            <div style="flex: 1 1 180px; min-width: 180px;">
+                                <label for="pais" style="font-weight:bold;">País:</label>
+                                <select id="pais" name="pais" required style="width:100%; padding:8px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc;">
+                                    <option value="" disabled selected>Selecciona tu país</option>
+                                    <option value="Ecuador">Ecuador</option>
+                                    <option value="Colombia">Colombia</option>
+                                    <option value="México">México</option>
+                                    <option value="Argentina">Argentina</option>
+                                </select>
+                            </div>
                         </div>
-                        <div style="flex: 1 1 180px; min-width: 180px;">
-                            <label for="pais" style="font-weight:bold;">País:</label>
-                            <select id="pais" name="pais" required style="width:100%; padding:8px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc;">
-                                <option value="" disabled selected>Selecciona tu país</option>
-                                <option value="Ecuador">Ecuador</option>
-                                <option value="Colombia">Colombia</option>
-                                <option value="México">México</option>
-                                <option value="Argentina">Argentina</option>
-                            </select>
+
+                        <div style="margin-bottom:15px;">
+                            <label style="font-weight:bold;">¿Cómo prefieres que te contactemos?</label>
+                            <input type="radio" id="email" name="contacto" value="email" required>
+                            <label for="email" style="margin-right:15px;">Correo electrónico</label>
+                            <input type="radio" id="telefono" name="contacto" value="telefono" required>
+                            <label for="telefono">Teléfono</label>
                         </div>
-                    </div>
 
-                    <div style="margin-bottom:15px;">
-                        <label style="font-weight:bold;">¿Cómo prefieres que te contactemos?</label>
-                        <input type="radio" id="email" name="contacto" value="email" required>
-                        <label for="email" style="margin-right:15px;">Correo electrónico</label>
-                        <input type="radio" id="telefono" name="contacto" value="telefono" required>
-                        <label for="telefono">Teléfono</label>
-                    </div>
+                        <div style="margin-bottom:15px;">
+                            <label for="intereses" style="font-weight:bold;">Selecciona tus intereses:</label>
+                            <input type="checkbox" id="proyectos" name="intereses" value="proyectos">
+                            <label for="proyectos" style="margin-right:10px;">Proyectos</label>
+                            <input type="checkbox" id="consultoria" name="intereses" value="consultoria">
+                            <label for="consultoria" style="margin-right:10px;">Consultoría</label>
+                            <input type="checkbox" id="colaboracion" name="intereses" value="colaboracion">
+                            <label for="colaboracion">Colaboración</label>
+                        </div>
 
-                    <div style="margin-bottom:15px;">
-                        <label for="intereses" style="font-weight:bold;">Selecciona tus intereses:</label>
-                        <input type="checkbox" id="proyectos" name="intereses" value="proyectos">
-                        <label for="proyectos" style="margin-right:10px;">Proyectos</label>
-                        <input type="checkbox" id="consultoria" name="intereses" value="consultoria">
-                        <label for="consultoria" style="margin-right:10px;">Consultoría</label>
-                        <input type="checkbox" id="colaboracion" name="intereses" value="colaboracion">
-                        <label for="colaboracion">Colaboración</label>
-                    </div>
+                        <div style="margin-bottom:20px;">
+                            <label for="mensaje" style="font-weight:bold;">Mensaje:</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" cols="50" required placeholder="Escribe tu mensaje" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;"></textarea>
+                        </div>
 
-                    <div style="margin-bottom:20px;">
-                        <label for="mensaje" style="font-weight:bold;">Mensaje:</label>
-                        <textarea id="mensaje" name="mensaje" rows="4" cols="50" required placeholder="Escribe tu mensaje" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;"></textarea>
-                    </div>
-
-                    <div>
-                        <button type="submit" style="background:#2c3e50; color:#fff; padding:10px 30px; border:none; border-radius:5px; font-size:1em; cursor:pointer;">Enviar</button>
-                    </div>
-                </fieldset>
-            </form>
-
-            <div style="margin-top:35px;">
-                <p style="font-weight:bold; margin-bottom:10px;">Ubicación: Escuela Superior Politécnica del Litoral, Guayaquil - Ecuador</p>
-                <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.7755041210012!2d-79.96596543046142!3d-2.1470429460896894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6db0a50a1455%3A0x400f4e3f1a718419!2sEscuela%20Superior%20Polit%C3%A9cnica%20del%20Litoral%20(ESPOL)!5e0!3m2!1ses-419!2sec!4v1685209876537!5m2!1ses-419!2sec" 
-                    width="100%" 
-                    height="300" 
-                    style="border:0; border-radius:10px;" 
-                    allowfullscreen="" 
-                    loading="lazy" 
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </div>
-        </section>
-
-        <section id="video" class="section">
-            <h2>Video de Presentación</h2>
-            <p>A continuación, un video relevante:</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/v6kEanzJhpg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </section>
-
-        <section id="referencias" class="section" style="max-width: 800px; margin: 0 auto;">
-            <h2 style="color:#2c3e50;">Referencias</h2>
-            <div style="display: flex; flex-wrap: wrap; gap: 24px;">
-                <div style="flex:1 1 250px; background: #f9f9f9; border-radius: 10px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); min-width: 250px;">
-                    <span style="font-style:italic; color:#2c3e50;">"Daniel demostró una gran capacidad de liderazgo y compromiso en todos los proyectos en los que participó."</span>
-                    <p style="margin:10px 0 0 0;">
-                        <span style="font-weight:bold;">María González</span><br>
-                        Coordinadora de Proyectos en TechSolutions<br>
-                        María trabajó con Daniel durante dos años, liderando equipos de desarrollo de software y destacando su habilidad para resolver problemas complejos.
-                    </p>
+                        <div>
+                            <button type="submit" style="background:#2c3e50; color:#fff; padding:10px 30px; border:none; border-radius:5px; font-size:1em; cursor:pointer;">Enviar</button>
+                        </div>
+                    </fieldset>
+                </form>
+                <div style="margin-top:35px; text-align:center;">
+                    <p style="font-weight:bold; margin-bottom:10px;">Ubicación: Escuela Superior Politécnica del Litoral, Guayaquil - Ecuador</p>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d997.7755041210012!2d-79.96596543046142!3d-2.1470429460896894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d6db0a50a1455%3A0x400f4e3f1a718419!2sEscuela%20Superior%20Polit%C3%A9cnica%20del%20Litoral%20(ESPOL)!5e0!3m2!1ses-419!2sec!4v1685209876537!5m2!1ses-419!2sec" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0; border-radius:10px;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
-                <div style="flex:1 1 250px; background: #f9f9f9; border-radius: 10px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); min-width: 250px;">
-                    <span style="font-style:italic; color:#2c3e50;">"Su actitud proactiva y su excelente comunicación hicieron que el trabajo en equipo fuera mucho más eficiente."</span>
-                    <p style="margin:10px 0 0 0;">
-                        <span style="font-weight:bold;">Carlos Pérez</span><br>
-                        Jefe de Soporte Técnico en Innovatech<br>
-                        Carlos fue supervisor de Daniel y destaca su dedicación y profesionalismo en la atención al cliente y soporte técnico.
-                    </p>
-                </div>
-                <div style="flex:1 1 250px; background: #f9f9f9; border-radius: 10px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); min-width: 250px;">
-                    <span style="font-style:italic; color:#2c3e50;">"Siempre dispuesto a aprender y aportar nuevas ideas, Daniel es un colaborador valioso en cualquier entorno profesional."</span>
-                    <p style="margin:10px 0 0 0;">
-                        <span style="font-weight:bold;">Lucía Ramírez</span><br>
-                        Coordinadora de Proyectos en GlobalSoft<br>
-                        Lucía colaboró con Daniel en varios proyectos internacionales, resaltando su adaptabilidad y creatividad.
-                    </p>
-                </div>
-            </div>
-        </section>
-    </main>
+            </section>
 
-    <footer>
-        <p>&copy; 2025 Daniel Julian Vilema Lazo. Todos los derechos reservados.</p>
-    </footer>
+            <section id="video" class="section">
+                <h2 class="subtitle">Video de Presentación</h2>
+                <p style="text-align:center;">A continuación, un video relevante:</p>
+                <div style="display:flex; justify-content:center;">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/v6kEanzJhpg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </section>
 
+            <section id="referencias" class="section">
+                <h2 class="subtitle">Referencias</h2>
+                <div class="referencias-flex">
+                    <div class="referencia-card">
+                        <span>"Daniel demostró una gran capacidad de liderazgo y compromiso en todos los proyectos en los que participó."</span>
+                        <p>
+                            <span style="font-weight:bold;">María González</span><br>
+                            Coordinadora de Proyectos en TechSolutions<br>
+                            María trabajó con Daniel durante dos años, liderando equipos de desarrollo de software y destacando su habilidad para resolver problemas complejos.
+                        </p>
+                    </div>
+                    <div class="referencia-card">
+                        <span>"Su actitud proactiva y su excelente comunicación hicieron que el trabajo en equipo fuera mucho más eficiente."</span>
+                        <p>
+                            <span style="font-weight:bold;">Carlos Pérez</span><br>
+                            Jefe de Soporte Técnico en Innovatech<br>
+                            Carlos fue supervisor de Daniel y destaca su dedicación y profesionalismo en la atención al cliente y soporte técnico.
+                        </p>
+                    </div>
+                    <div class="referencia-card">
+                        <span>"Siempre dispuesto a aprender y aportar nuevas ideas, Daniel es un colaborador valioso en cualquier entorno profesional."</span>
+                        <p>
+                            <span style="font-weight:bold;">Lucía Ramírez</span><br>
+                            Coordinadora de Proyectos en GlobalSoft<br>
+                            Lucía colaboró con Daniel en varios proyectos internacionales, resaltando su adaptabilidad y creatividad.
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 Daniel Julian Vilema Lazo. Todos los derechos reservados.</p>
+        </footer>
+    </div>
 </body>
 </html>

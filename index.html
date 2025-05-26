@@ -28,14 +28,7 @@
             color: #333;
             text-align: center;
         }
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 0;
-            margin-bottom: 30px;
-            gap: 15px;
-        }
+
         nav ul li {
             margin: 0;
         }
@@ -123,6 +116,19 @@
 </head>
 <body>
     <div class="container">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#perfil">Perfil</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#educacion">Educación</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#referencias">Referencias</a></li>
+            </ul>
+        </nav>
+    </header>
         <section id="perfil" class="section">
             <h2 class="subtitle">Perfil</h2>
             <img id="photo" src="https://placehold.co/200x200?text=Foto+Perfil" alt="Foto de perfil" class="perfil-img">
@@ -136,19 +142,6 @@
                 <a href="https://www.linkedin.com/in/danielvilema" target="_blank">www.linkedin.com/in/danielvilema</a>
             </p>
         </section>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="#perfil">Perfil</a></li>
-                    <li><a href="#habilidades">Habilidades</a></li>
-                    <li><a href="#experiencia">Experiencia</a></li>
-                    <li><a href="#educacion">Educación</a></li>
-                    <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                    <li><a href="#referencias">Referencias</a></li>
-                </ul>
-            </nav>
-        </header>
         <main>
             <section id="habilidades" class="section">
                 <h2 class="subtitle">Habilidades</h2>
@@ -231,49 +224,36 @@
                 </p>
                 <form action="#" method="post" style="background: #f9f9f9; padding: 25px 30px 20px 30px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); max-width: 600px; margin: 0 auto;">
                     <fieldset style="border:none; padding:0; margin:0;">
-                        <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-                            <div style="flex: 1 1 250px; min-width: 220px;">
-                                <label for="nombre" style="font-weight:bold;">Nombre:</label>
-                                <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre" style="width:100%; padding:8px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc;">
-                            </div>
-                            <div style="flex: 1 1 180px; min-width: 180px;">
-                                <label for="pais" style="font-weight:bold;">País:</label>
-                                <select id="pais" name="pais" required style="width:100%; padding:8px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc;">
-                                    <option value="" disabled selected>Selecciona tu país</option>
-                                    <option value="Ecuador">Ecuador</option>
-                                    <option value="Colombia">Colombia</option>
-                                    <option value="México">México</option>
-                                    <option value="Argentina">Argentina</option>
-                                </select>
-                            </div>
-                        </div>
+                        <label for="nombre" style="font-weight:bold;">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre" style="width:100%; padding:8px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc;">
 
-                        <div style="margin-bottom:15px;">
-                            <label style="font-weight:bold;">¿Cómo prefieres que te contactemos?</label>
-                            <input type="radio" id="email" name="contacto" value="email" required>
-                            <label for="email" style="margin-right:15px;">Correo electrónico</label>
-                            <input type="radio" id="telefono" name="contacto" value="telefono" required>
-                            <label for="telefono">Teléfono</label>
-                        </div>
+                        <label for="pais" style="font-weight:bold;">País:</label>
+                        <select id="pais" name="pais" required style="width:100%; padding:8px; margin-bottom:15px; border-radius:5px; border:1px solid #ccc;">
+                            <option value="" disabled selected>Selecciona tu país</option>
+                            <option value="Ecuador">Ecuador</option>
+                            <option value="Colombia">Colombia</option>
+                            <option value="México">México</option>
+                            <option value="Argentina">Argentina</option>
+                        </select>
 
-                        <div style="margin-bottom:15px;">
-                            <label for="intereses" style="font-weight:bold;">Selecciona tus intereses:</label>
-                            <input type="checkbox" id="proyectos" name="intereses" value="proyectos">
-                            <label for="proyectos" style="margin-right:10px;">Proyectos</label>
-                            <input type="checkbox" id="consultoria" name="intereses" value="consultoria">
-                            <label for="consultoria" style="margin-right:10px;">Consultoría</label>
-                            <input type="checkbox" id="colaboracion" name="intereses" value="colaboracion">
-                            <label for="colaboracion">Colaboración</label>
-                        </div>
+                        <label style="font-weight:bold;">¿Cómo prefieres que te contactemos?</label>
+                        <input type="radio" id="email" name="contacto" value="email" required>
+                        <label for="email" style="margin-right:15px;">Correo electrónico</label>
+                        <input type="radio" id="telefono" name="contacto" value="telefono" required>
+                        <label for="telefono">Teléfono</label>
 
-                        <div style="margin-bottom:20px;">
-                            <label for="mensaje" style="font-weight:bold;">Mensaje:</label>
-                            <textarea id="mensaje" name="mensaje" rows="4" cols="50" required placeholder="Escribe tu mensaje" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;"></textarea>
-                        </div>
+                        <label for="intereses" style="font-weight:bold;">Selecciona tus intereses:</label>
+                        <input type="checkbox" id="proyectos" name="intereses" value="proyectos">
+                        <label for="proyectos" style="margin-right:10px;">Proyectos</label>
+                        <input type="checkbox" id="consultoria" name="intereses" value="consultoria">
+                        <label for="consultoria" style="margin-right:10px;">Consultoría</label>
+                        <input type="checkbox" id="colaboracion" name="intereses" value="colaboracion">
+                        <label for="colaboracion">Colaboración</label>
 
-                        <div>
-                            <button type="submit" style="background:#2c3e50; color:#fff; padding:10px 30px; border:none; border-radius:5px; font-size:1em; cursor:pointer;">Enviar</button>
-                        </div>
+                        <label for="mensaje" style="font-weight:bold;">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" cols="50" required placeholder="Escribe tu mensaje" style="width:100%; padding:8px; border-radius:5px; border:1px solid #ccc;"></textarea>
+
+                        <button type="submit" style="background:#2c3e50; color:#fff; padding:10px 30px; border:none; border-radius:5px; font-size:1em; cursor:pointer;">Enviar</button>
                     </fieldset>
                 </form>
                 <div style="margin-top:35px; text-align:center;">
@@ -300,32 +280,32 @@
 
             <section id="referencias" class="section">
                 <h2 class="subtitle">Referencias</h2>
-                <div class="referencias-flex">
-                    <div class="referencia-card">
-                        <span>"Daniel demostró una gran capacidad de liderazgo y compromiso en todos los proyectos en los que participó."</span>
-                        <p>
-                            <span style="font-weight:bold;">María González</span><br>
-                            Coordinadora de Proyectos en TechSolutions<br>
-                            María trabajó con Daniel durante dos años, liderando equipos de desarrollo de software y destacando su habilidad para resolver problemas complejos.
-                        </p>
-                    </div>
-                    <div class="referencia-card">
-                        <span>"Su actitud proactiva y su excelente comunicación hicieron que el trabajo en equipo fuera mucho más eficiente."</span>
-                        <p>
-                            <span style="font-weight:bold;">Carlos Pérez</span><br>
-                            Jefe de Soporte Técnico en Innovatech<br>
-                            Carlos fue supervisor de Daniel y destaca su dedicación y profesionalismo en la atención al cliente y soporte técnico.
-                        </p>
-                    </div>
-                    <div class="referencia-card">
-                        <span>"Siempre dispuesto a aprender y aportar nuevas ideas, Daniel es un colaborador valioso en cualquier entorno profesional."</span>
-                        <p>
-                            <span style="font-weight:bold;">Lucía Ramírez</span><br>
-                            Coordinadora de Proyectos en GlobalSoft<br>
-                            Lucía colaboró con Daniel en varios proyectos internacionales, resaltando su adaptabilidad y creatividad.
-                        </p>
-                    </div>
-                </div>
+                <article class="referencia-card">
+                    <span>"Daniel demostró una gran capacidad de liderazgo y compromiso en todos los proyectos en los que participó."</span>
+                    <p>
+                        <span style="font-weight:bold;">María González</span><br>
+                        Coordinadora de Proyectos en TechSolutions<br>
+                        María trabajó con Daniel durante dos años, liderando equipos de desarrollo de software y destacando su habilidad para resolver problemas complejos.
+                    </p>
+                </article>
+
+                <article class="referencia-card">
+                    <span>"Su actitud proactiva y su excelente comunicación hicieron que el trabajo en equipo fuera mucho más eficiente."</span>
+                    <p>
+                        <span style="font-weight:bold;">Carlos Pérez</span><br>
+                        Jefe de Soporte Técnico en Innovatech<br>
+                        Carlos fue supervisor de Daniel y destaca su dedicación y profesionalismo en la atención al cliente y soporte técnico.
+                    </p>
+                </article>
+
+                <article class="referencia-card">
+                    <span>"Siempre dispuesto a aprender y aportar nuevas ideas, Daniel es un colaborador valioso en cualquier entorno profesional."</span>
+                    <p>
+                        <span style="font-weight:bold;">Lucía Ramírez</span><br>
+                        Coordinadora de Proyectos en GlobalSoft<br>
+                        Lucía colaboró con Daniel en varios proyectos internacionales, resaltando su adaptabilidad y creatividad.
+                    </p>
+                </article>
             </section>
         </main>
         <footer>

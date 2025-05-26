@@ -24,6 +24,13 @@ footer p {
 
 nav > ul {
     list-style: none;
+    display: flex;
+    justify-content: center; /* cambiado de space-between a center */
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem; /* aumentado de 1rem a 2rem para mejor distribución */
+    padding: 0; /* elimina el padding por defecto */
+    margin: 1rem 0; /* agrega margen vertical */
 }
 
 section {
@@ -41,4 +48,38 @@ section {
     -webkit-box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
     -moz-box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
     box-shadow: 3px 3px 1px 0px rgba(235, 234, 234, 0.60);
+}
+
+/* Organización con Grid */
+#referencias {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+#referencias > h2 {
+    grid-column: 1 / -1;
+}
+
+/* Organización con Flex (comentada como alternativa) */
+/*
+#referencias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+#referencias > h2 {
+    flex-basis: 100%;
+}
+
+#referencias > article {
+    flex: 1;
+}
+*/
+
+/* Opcional: si quieres que el header ocupe el mismo ancho que las secciones */
+header {
+    width: 100%;
+    margin-bottom: 2rem;
 }

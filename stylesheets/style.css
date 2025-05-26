@@ -7,14 +7,79 @@ h1 {
     font-weight: bold;
 }
 
+/* Estilos Tech */
+:root {
+    --tech-primary: #0d9488; /* Cambiado de #2dd4bf a un turquesa más oscuro */
+    --tech-secondary: #0f172a;
+    --tech-gradient: linear-gradient(135deg, #0d9488 0%, #0369a1 100%); /* Ajustado el gradiente también */
+}
+
+body {
+    background: #f8fafc;
+    color: #1e293b;
+}
+
+.container {
+    border: 1px solid rgba(45, 212, 191, 0.1);
+    box-shadow: 0 8px 32px rgba(15, 23, 42, 0.1);
+}
+
 #photo {
     width: 8vw;
     height: auto;
 }
 
 .subtitle {
-    color: rgb(151 156 165 / 0.89);
+    color: var(--tech-secondary);
     text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 0.5rem 0;
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Efecto de línea gradiente debajo del título */
+.subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--tech-gradient);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+/* El título se agranda al hacer hover */
+.subtitle:hover::after {
+    width: 120px;
+}
+
+/* Efecto de brillo en el texto */
+.subtitle::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(13, 148, 136, 0.1),
+        transparent
+    );
+    left: -100%;
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    100% {
+        left: 100%;
+    }
 }
 
 footer p {
@@ -82,4 +147,162 @@ section {
 header {
     width: 100%;
     margin-bottom: 2rem;
+}
+
+/* Encabezado y navegación tech */
+h1 {
+    background: var(--tech-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+}
+
+nav > ul li a {
+    position: relative;
+    color: var(--tech-secondary);
+    font-weight: 500;
+}
+
+nav > ul li a:hover {
+    color: var(--tech-primary);
+}
+
+nav > ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background: var(--tech-gradient);
+    transition: width 0.3s ease;
+}
+
+nav > ul li a:hover::after {
+    width: 100%;
+}
+
+/* Secciones con estilo tech */
+section {
+    border: 1px solid rgba(45, 212, 191, 0.2);
+    background: white;
+    backdrop-filter: blur(16px);
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+section:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(45, 212, 191, 0.1);
+}
+
+.subtitle {
+    color: var(--tech-secondary);
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 0.5rem 0;
+    margin-bottom: 1.5rem;
+    position: relative;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Efecto de línea gradiente debajo del título */
+.subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--tech-gradient);
+    border-radius: 2px;
+    transition: width 0.3s ease;
+}
+
+/* El título se agranda al hacer hover */
+.subtitle:hover::after {
+    width: 120px;
+}
+
+/* Efecto de brillo en el texto */
+.subtitle::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(13, 148, 136, 0.1),
+        transparent
+    );
+    left: -100%;
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    100% {
+        left: 100%;
+    }
+}
+
+/* Tarjetas de referencias con estilo tech */
+.referencia-card {
+    border: 1px solid rgba(45, 212, 191, 0.2);
+    background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(249,250,251,0.9) 100%);
+    backdrop-filter: blur(16px);
+    transition: transform 0.2s ease;
+}
+
+.referencia-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(45, 212, 191, 0.15);
+}
+
+/* Botones y elementos interactivos */
+button, 
+input[type="submit"] {
+    background: var(--tech-gradient);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(45, 212, 191, 0.2);
+}
+
+/* Enlaces */
+a {
+    color: var(--tech-primary);
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #0ea5e9;
+}
+
+/* Imagen de perfil */
+.perfil-img {
+    border: 3px solid transparent;
+    background: var(--tech-gradient);
+    background-clip: padding-box;
+    position: relative;
+}
+
+.perfil-img::after {
+    content: '';
+    position: absolute;
+    top: -3px; right: -3px; bottom: -3px; left: -3px;
+    background: var(--tech-gradient);
+    border-radius: 50%;
+    z-index: -1;
 }
